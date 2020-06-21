@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+
+    android:background="@drawable/background7"
+    tools:context=".BookingSystem.Personalinformation">
+
+    <TextView
+        android:id="@+id/personalInformationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="#5000FA"
+        android:text="Fill Your Personal Information"/>
+    <TableLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:padding="10dp"/>
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:hint="Name"/>
+        </TableRow>
+        <TableRow android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NRC"
+                android:padding="10dp"/>
+            <EditText
+                android:id="@+id/nrcEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:hint="NRC"
+                />
+        </TableRow >
+        <TableRow android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:padding="10dp"/>
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:inputType="phone"
+                android:hint="Phone"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:gravity="top"
+                android:padding="10dp"
+                />
+            <EditText
+                android:id="@+id/addressEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:lines="3"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:padding="10dp"/>
+            <EditText
+                android:id="@+id/emailEditTex"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"/>
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:id="@+id/SubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Booking"
+        android:onClick="submitBooking"
+        android:padding="20dp"
+        android:background="#6F00FF"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>

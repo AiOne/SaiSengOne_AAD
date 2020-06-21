@@ -1,0 +1,2 @@
+rootProject.name='SSO_AAD'
+include ':app'

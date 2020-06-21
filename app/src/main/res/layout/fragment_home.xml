@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/background5"
+    android:orientation="vertical"
+    android:visibility="visible"  android:padding="20dp"
+    tools:context=".ui.home.HomeFragment">
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Welcome to MM Land Trip "
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_height="200dp"
+        android:cropToPadding="true"
+        android:src="@drawable/home" />
+    <Button
+        android:layout_marginTop="40dp"
+        android:id="@+id/browsePlaceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D62198F3"
+        android:clickable="true"
+        android:onClick="broweMM"
+        android:padding="30dp"
+        android:text="Browse Myanmar (Map)"
+        android:fadingEdge="vertical"
+        android:textColor="#FFFFFF" />
+    <Button
+        android:id="@+id/browsePlaceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C5F44336"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="bookBus"
+        android:padding="30dp"
+        android:text="Booking Bus"
+        android:textColor="#FFFFFF" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|right"
+        android:layout_marginBottom="40dp"
+        android:textSize="7dp"
+        android:text="Copyright@2020| by Sai Seng One"
+        android:textColor="@android:color/white" />
+</LinearLayout>

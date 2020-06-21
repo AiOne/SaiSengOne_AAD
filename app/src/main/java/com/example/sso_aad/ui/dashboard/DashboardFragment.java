@@ -1,0 +1,46 @@
+package com.example.sso_aad.ui.dashboard;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+
+import com.example.sso_aad.BusItemFragment;
+import com.example.sso_aad.R;
+
+public class DashboardFragment extends Fragment {
+
+    private DashboardViewModel dashboardViewModel;
+    private FragmentActivity myContext;
+
+    @Override
+    public void onAttach(Activity activity) {
+        myContext = (FragmentActivity) activity;
+        super.onAttach(activity);
+    }
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        dashboardViewModel =
+                ViewModelProviders.of(this).get(DashboardViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+        FragmentTransaction fragmentTransaction = myContext.getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.BusListFragment, new BusItemFragment());
+        fragmentTransaction.commit();
+        return root;
+    }
+
+
+}
+
